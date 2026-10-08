@@ -26,3 +26,10 @@ class Truck extends Vehicle {
     return super.calculatePrice(days) * 1.2; 
   }
 }
+const myCar = new Car("Chevrolet", "Malibu", 300000);
+const myMoto = new Motorcycle("Yamaha", "R3", 150000);
+const myTruck = new Truck("MAN", "TGX", 500000);
+
+console.log(myCar.rent(3));  
+console.log(myMoto.rent(3));  
+console.log(myTruck.rent(3));

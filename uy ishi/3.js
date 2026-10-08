@@ -64,3 +64,12 @@ class Order {
     this.status = "pending";
   }
 }
+const phone = new Product(1, "iPhone 15", 1000, 5); 
+const user = new User("Vali");
+
+user.addToCart(phone, 2);
+console.log("Savatdagi umumiy summa:", user.cart.getTotalPrice(), "$");
+
+const order = new Order(user.cart); 
+console.log("Buyurtmadan so'ng ombordagi qoldiq:", phone.stock, "ta");
+console.log("Buyurtma holati:", order.status);

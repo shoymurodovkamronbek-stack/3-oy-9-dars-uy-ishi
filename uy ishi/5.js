@@ -72,3 +72,13 @@ class CRM {
     };
   }
 }
+const crm = new CRM();
+
+const admin = new Admin(1, "Admin User", "admin@crm.uz");
+const emp1 = new Employee(2, "Jasur", "jasur@crm.uz");
+const cust1 = new Customer(101, "Anvar", "+998901234567");
+crm.addEmployee(emp1);
+crm.addCustomer(cust1);
+const task1 = crm.createTask("Sayt tuzish", "Landing page yaratish kerak", cust1, emp1);
+crm.changeTaskStatus(task1.id, "in progress", emp1);
+console.log("CRM Statistikasi:", crm.getStatistics());

@@ -56,3 +56,15 @@ class Course {
     return `Kurs: ${this.name}, O'quvchilar: ${this.students.length} ta`;
   }
 }
+
+const student1 = new Student("Sardor", 20, "ST-101");
+const teacher1 = new Teacher("Olim aka", 40, 1500);
+const jsCourse = new Course("JavaScript OOP");
+
+jsCourse.setTeacher(teacher1);
+jsCourse.addStudent(student1);
+jsCourse.addStudent(student1);
+
+console.log(student1.getInfo());
+console.log(teacher1.getInfo());
+console.log(jsCourse.getCourseInfo());

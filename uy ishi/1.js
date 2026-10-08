@@ -28,4 +28,10 @@ class BankAccount {
     return this.#transactions;
   }
 }
+const myAccount = new BankAccount("Ali", 100);
+myAccount.deposit(50);
+myAccount.withdraw(30);
+console.log("Egasining ismi:", myAccount.owner);
+console.log("Hozirgi balans:", myAccount.getBalance());
+console.log("Tranzaksiyalar:", myAccount.getTransactions());
 //error bor ekanku
